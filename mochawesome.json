@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-10-28T23:15:37.279Z",
+    "end": "2024-10-28T23:15:42.868Z",
+    "duration": 5589,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8089511a-c4c4-438f-b0d5-ac9b2be8f1ae",
+      "title": "",
+      "fullFile": "cypress\\e2e\\aula4.cy.js",
+      "file": "cypress\\e2e\\aula4.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "552e344e-21e4-471c-9462-7b4f468014d1",
+          "title": "Teste de UI no Portal Acadêmico",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Caso de teste 1: Verificar título da página",
+              "fullTitle": "Teste de UI no Portal Acadêmico Caso de teste 1: Verificar título da página",
+              "timedOut": null,
+              "duration": 2777,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Verifica se o título da página é exatamente igual ao esperado\ncy.title().should('eq', 'Site Acadêmico- Página de Autenticação');",
+              "err": {},
+              "uuid": "6ee0bdcd-efbc-4af5-8c0b-ffcc4c0125d5",
+              "parentUUID": "552e344e-21e4-471c-9462-7b4f468014d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Caso de teste 2: Verificar presença do botão Continuar",
+              "fullTitle": "Teste de UI no Portal Acadêmico Caso de teste 2: Verificar presença do botão Continuar",
+              "timedOut": null,
+              "duration": 442,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Verifica se o botão \"Continuar\" está visível na tela inicial\ncy.get('input[type=\"submit\"][value=\"Continuar\"]').should('be.visible');",
+              "err": {},
+              "uuid": "42f83bf7-7f13-4df6-8dde-b23a3fb8d02e",
+              "parentUUID": "552e344e-21e4-471c-9462-7b4f468014d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Caso de teste 3: Verificar ausência de funcionalidade de alteração de senha",
+              "fullTitle": "Teste de UI no Portal Acadêmico Caso de teste 3: Verificar ausência de funcionalidade de alteração de senha",
+              "timedOut": null,
+              "duration": 264,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Faz uma requisição para a URL que deveria ser de \"alterar senha\"\ncy.visit(`${url}/alterar-senha`, {\n  failOnStatusCode: false\n});\n// Verifica se a página não contém elementos de alteração de senha\ncy.contains('Alterar senha').should('not.exist'); // Verifique se o link ou texto \"Alterar senha\" está ausente",
+              "err": {},
+              "uuid": "5fcb9a3a-cf05-4e14-a5d5-7ef30e02a29f",
+              "parentUUID": "552e344e-21e4-471c-9462-7b4f468014d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Caso de teste 4: Verificar ausência de \"Esqueci minha senha\" (caso negativo)",
+              "fullTitle": "Teste de UI no Portal Acadêmico Caso de teste 4: Verificar ausência de \"Esqueci minha senha\" (caso negativo)",
+              "timedOut": null,
+              "duration": 114,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Verifica que o link ou botão de \"Esqueci minha senha\" não está presente\ncy.contains('Esqueci minha senha').should('not.exist');",
+              "err": {},
+              "uuid": "080c291b-e694-4614-8b40-988557978911",
+              "parentUUID": "552e344e-21e4-471c-9462-7b4f468014d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Caso de teste 5: Verificar a presença do texto \"Home\" no canto superior esquerdo",
+              "fullTitle": "Teste de UI no Portal Acadêmico Caso de teste 5: Verificar a presença do texto \"Home\" no canto superior esquerdo",
+              "timedOut": null,
+              "duration": 199,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Acessa a página\ncy.visit('https://siteseguro.inatel.br/PortalAcademico/WebLogin.aspx?ReturnUrl=%2fPortalacademico');\n// Verifica se o texto \"Home\" está visível no canto superior esquerdo da página\ncy.contains('Home').should('be.visible');",
+              "err": {},
+              "uuid": "7f5ba222-899f-406a-ba96-cc13c6296496",
+              "parentUUID": "552e344e-21e4-471c-9462-7b4f468014d1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Caso de teste 6: Mudar para a seção \"Área Acadêmica\"",
+              "fullTitle": "Teste de UI no Portal Acadêmico Caso de teste 6: Mudar para a seção \"Área Acadêmica\"",
+              "timedOut": null,
+              "duration": 319,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Localiza e clica no link \"Área Acadêmica\"\ncy.contains('Área Acadêmica').click();\n// o conteúdo da página mudou para a seção \"Área Acadêmica\"\ncy.contains('Login do Docente/Funcionário').should('be.visible');",
+              "err": {},
+              "uuid": "87da668d-756f-4293-bf85-67f8f32530e3",
+              "parentUUID": "552e344e-21e4-471c-9462-7b4f468014d1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ee0bdcd-efbc-4af5-8c0b-ffcc4c0125d5",
+            "42f83bf7-7f13-4df6-8dde-b23a3fb8d02e",
+            "5fcb9a3a-cf05-4e14-a5d5-7ef30e02a29f",
+            "080c291b-e694-4614-8b40-988557978911",
+            "7f5ba222-899f-406a-ba96-cc13c6296496",
+            "87da668d-756f-4293-bf85-67f8f32530e3"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4115,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
